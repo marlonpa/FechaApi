@@ -6,20 +6,22 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
 
 
-const DateDisplay = ((props) => (
 
+
+const DateDisplay = ((props) => (
+    
   
   <Paper className="container">
-   
+     
       <List>
           <ListItem>
-<ListItemText>Day: {props.apiResponse.date}</ListItemText>
+<ListItemText>Day: {props.apiResponse.split("-")[0]}</ListItemText>
       </ListItem>
       <ListItem>
-          <ListItemText>Month: </ListItemText>
+          <ListItemText>Month: {props.apiResponse.split("-")[1]} </ListItemText>
       </ListItem>
       <ListItem>
-          <ListItemText>Year: </ListItemText>
+          <ListItemText>Year: {props.apiResponse.split("-")[2]}</ListItemText>
       </ListItem>
       </List>
   </Paper>
