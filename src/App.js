@@ -16,8 +16,8 @@ class App extends Component {
   handleButtonClick = () => {
     API.getAPIResponse().then((res) => {
        this.setState({
-        apiResponse:res
-        
+        apiResponse:res.date
+                
       })
       
       
